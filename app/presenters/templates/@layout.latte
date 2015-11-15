@@ -1,0 +1,32 @@
+{**
+ * @param string	$base	 web base path
+ * @param string	$public	 web public path
+ *}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Jan Janeczko, Richard Kubný">
+		<base href="{$public}/">
+
+		<link rel="stylesheet" href="css/global-style.css">
+		{block headstyle}{/block}
+
+		<script src="js/jquery-2.1.4.min.js"></script>
+		{block headscript}{/block}
+
+		<title>{ifset title}{include title|striptags} | {/ifset}Magnus</title>
+	</head>
+	<body>
+		{include 'components/mainMenu.latte'}
+
+		{include content}
+
+		{include 'components/footer.latte'}
+
+		<script src="js/global-scripts.js"></script>
+		<script src="js/admin-logout.js" n:if="$user->loggedIn"></script>
+		{block bodyscript}{/block}
+	</body>
+</html>

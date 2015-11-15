@@ -1,0 +1,61 @@
+{block title}Vytvořit účet | Admin{/block}
+
+{block content}
+	<h1>Vytvořit účet</h1>
+
+	<form n:name="registerForm">
+		<table>
+			<tr n:if="$form->hasErrors()" n:foreach="$form->errors as $error">
+				<td colspan="2" style="color: red;">{$error}</td>
+			</tr>
+			<tr>
+				<th><label n:name="username">Login</label></th>
+				<td><input n:name="username"></td>
+			</tr>
+			<tr>
+				<th><label n:name="email">Email</label></th>
+				<td><input n:name="email"></td>
+			</tr>
+			<tr>
+				<th><label n:name="password">Heslo</label></th>
+				<td><input n:name="password"></td>
+			</tr>
+			<tr>
+				<th><label n:name="passwordVerify">Ověření hesla</label></th>
+				<td><input n:name="passwordVerify"></td>
+			</tr>
+			<tr>
+				<th><label n:name="firstName">Jméno</label></th>
+				<td><input n:name="firstName"></td>
+			</tr>
+			<tr>
+				<th><label n:name="lastName">Příjmení</label></th>
+				<td><input n:name="lastName"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button n:name="createAccount">Vytvořit</button></td>
+			</tr>
+		</table>
+	</form>
+
+	{if !empty($admins)}
+		<hr>
+
+		<h2>Administrátorské účty</h2>
+
+		<table>
+			<tr>
+				<th>Login</th>
+				<th>Email</th>
+				<th>Jméno</th>
+				<th>Příjmení</th>
+			</tr>
+			<tr n:foreach="$admins as $admin">
+				<td>{$admin->username}</td>
+				<td>{$admin->email}</td>
+				<td>{$admin->first_name}</td>
+				<td>{$admin->last_name}</td>
+			</tr>
+		</table>
+	{/if}
+{/block}
