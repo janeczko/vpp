@@ -20,13 +20,13 @@ class UserManager extends Object implements IAuthenticator
 	/** @var Context */
 	protected $db;
 
-    /** @var Admin */
-    protected $admin;
+    /** @var UserModel */
+    protected $userModel;
 
-	public function __construct(Context $database, Admin $admin)
+	public function __construct(Context $database, UserModel $user)
 	{
 		$this->db = $database;
-        $this->admin = $admin;
+        $this->userModel = $user;
 	}
 
 
@@ -39,7 +39,7 @@ class UserManager extends Object implements IAuthenticator
 	{
 		list($username, $password) = $credentials;
 
-        $user = $this->admin->findBy('username', $username);
+        $user = $this->userModel->findBy('username', $username);
         $usernameFail = false;
 
 		if (!$user)
@@ -47,7 +47,7 @@ class UserManager extends Object implements IAuthenticator
 
         if ($usernameFail)
         {
-            $user = $this->admin->findBy('email', $username);
+            $user = $this->userModel->findBy('email', $username);
 
             if (!$user)
                 throw new AuthenticationException('Špatné přihlašovací jméno nebo email.', self::IDENTITY_NOT_FOUND);
@@ -58,7 +58,7 @@ class UserManager extends Object implements IAuthenticator
 
         if (Passwords::needsRehash($user->password))
         {
-            $user->password = $this->db->table('admin')->where('id', $user->id)->update([
+            $user->password = $this->db->table('user')->where('id', $user->id)->update([
                 'password' => Passwords::hash($password)
             ])->password;
 		}
@@ -66,7 +66,7 @@ class UserManager extends Object implements IAuthenticator
 		$arr = (array) $user;
 		unset($arr['password']);
 
-		return new Identity($user->id, 'admin', $arr);
+		return new Identity($user->id, $user->role, $arr);
 	}
 
 
@@ -78,7 +78,7 @@ class UserManager extends Object implements IAuthenticator
 	{
         try
         {
-            $this->admin->add([
+            $this->userModel->add([
                 'username' => $user->username,
                 'email' => $user->email,
                 'password' => Passwords::hash($user->password),

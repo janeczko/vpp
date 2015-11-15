@@ -1,13 +1,3 @@
 <nav>
-	<ul>
-		<li><a href="{$base}">Home</a></li>
-		<li><a href="{$base}/admin">Admin</a> {* pozdeji se skryje *}
-			<ul n:if="$user->loggedIn">
-				{* tady budou vsechny admin kokotiny *}
-				<li><a href="{$base}/admin/vytvorit-ucet">Vytvořit účet</a></li>
-				{* tridu "admin-logout" je potreba zachovat na odhlasovacim odkazu *}
-				<li><a class="admin-logout" href="{$base}/admin/odhlasit">Odhlásit</a></li>
-			</ul>
-		</li>
-	</ul>
+
 </nav>

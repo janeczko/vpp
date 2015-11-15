@@ -21,6 +21,6 @@ session:
 
 services:
 	- App\Model\UserManager
-	- App\Model\Admin
+	- App\Model\UserModel
 	router: App\RouterFactory::createRouter
 	user: App\Model\User

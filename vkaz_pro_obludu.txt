@@ -1,0 +1,2 @@
+Pokud by nìco nahodou nechtìlo fungovat. doporuèu ve složce "temp" vytvoøit složky "cache" a "sessions".
+A jestli to nepomùže tak je vážnì nìco v prdeli.

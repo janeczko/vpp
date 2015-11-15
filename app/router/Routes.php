@@ -13,10 +13,10 @@ class Routes extends Object implements IRoutes
     public function getRoutes()
     {
         return [
-            'admin' => 'Admin:default',
-            'admin/prihlasit' => 'AdminUser:login',
-            'admin/odhlasit' => 'AdminUser:logout',
-            'admin/vytvorit-ucet' => 'AdminUser:register',
+//            'admin' => 'Admin:default',
+//            'admin/prihlasit' => 'AdminUser:login',
+//            'admin/odhlasit' => 'AdminUser:logout',
+//            'admin/vytvorit-ucet' => 'AdminUser:register',
 
             '<presenter>/<action>[/<id>]' => 'Homepage:default'
         ];

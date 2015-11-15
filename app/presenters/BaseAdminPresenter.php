@@ -6,8 +6,8 @@ use Nette,
 
 abstract class BaseAdminPresenter extends BasePresenter
 {
-    /** @var Model\Admin @inject */
-    public $admin;
+    /** @var Model\UserModel @inject */
+    public $userModel;
 
     /** @var Model\UserManager @inject */
     public $userManager;

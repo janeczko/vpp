@@ -10,13 +10,15 @@
 		<meta name="author" content="Jan Janeczko, Richard Kubný">
 		<base href="{$public}/">
 
+		<link rel="stylesheet" href="css/uikit.min.css">
 		<link rel="stylesheet" href="css/global-style.css">
 		{block headstyle}{/block}
 
 		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/uikit.min.js"></script>
 		{block headscript}{/block}
 
-		<title>{ifset title}{include title|striptags} | {/ifset}Magnus</title>
+		<title>{ifset title}{include title|striptags} | {/ifset}VPP</title>
 	</head>
 	<body>
 		{include 'components/mainMenu.latte'}
