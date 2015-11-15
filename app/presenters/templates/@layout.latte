@@ -21,14 +21,15 @@
 		<title>{ifset title}{include title|striptags} | {/ifset}VPP</title>
 	</head>
 	<body>
-		{include 'components/mainMenu.latte'}
+		{include 'components/menus/mainMenu.latte'}
 
-		{include content}
+		<div id="page-wrapper">
+			{include content}
+		</div>
 
 		{include 'components/footer.latte'}
 
 		<script src="js/global-scripts.js"></script>
-		<script src="js/admin-logout.js" n:if="$user->loggedIn"></script>
 		{block bodyscript}{/block}
 	</body>
 </html>

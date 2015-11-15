@@ -1,0 +1,41 @@
+html,
+body {
+  position: relative;
+}
+nav#main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #FFFFF5;
+}
+nav#main-menu .menu-items {
+  height: 100%;
+  position: relative;
+  padding: 0;
+}
+nav#main-menu .menu-items li {
+  display: inline-block;
+  height: 100%;
+  padding: 0 15px 0 15px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #B8B800;
+  border-top: 4px solid #FFFFF5;
+  line-height: calc(56px);
+}
+nav#main-menu .menu-items li a {
+  color: #B8B800;
+  text-decoration: none;
+}
+nav#main-menu .menu-items li:hover {
+  cursor: pointer;
+  border-top: 4px solid #B8B800;
+}
+nav#main-menu .menu-items li.active {
+  border-top: 4px solid #B8B800 !important;
+}
+#page-wrapper {
+  margin-top: 60px;
+}

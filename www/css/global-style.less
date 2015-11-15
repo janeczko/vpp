@@ -1,0 +1,50 @@
+html, body {
+    position: relative;
+}
+
+@mainMenuHeight: 60px;
+@mainMenuBackground: #FFFFF5;
+
+nav#main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @mainMenuHeight;
+    background-color: @mainMenuBackground;
+
+    .menu-items {
+        height: 100%;
+        position: relative;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            height: 100%;
+            padding: 0 15px 0 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #B8B800;
+            border-top: 4px solid @mainMenuBackground;
+            line-height: calc(@mainMenuHeight - 4px);
+
+            a {
+                color: #B8B800;
+                text-decoration: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+                border-top: 4px solid #B8B800;
+            }
+
+            &.active {
+                border-top: 4px solid #B8B800 !important;
+            }
+        }
+    }
+}
+
+#page-wrapper {
+    margin-top: @mainMenuHeight;
+}
