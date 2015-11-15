@@ -8,7 +8,8 @@ nav#main-menu {
   left: 0;
   right: 0;
   height: 60px;
-  background-color: #FFFFF5;
+  background-color: #242424;
+  z-index: 1000;
 }
 nav#main-menu .menu-items {
   height: 100%;
@@ -22,7 +23,7 @@ nav#main-menu .menu-items li {
   font-weight: bold;
   font-size: 1.2em;
   color: #B8B800;
-  border-top: 4px solid #FFFFF5;
+  border-top: 4px solid #242424;
   line-height: calc(56px);
 }
 nav#main-menu .menu-items li a {
@@ -34,7 +35,7 @@ nav#main-menu .menu-items li:hover {
   border-top: 4px solid #B8B800;
 }
 nav#main-menu .menu-items li.active {
-  border-top: 4px solid #B8B800 !important;
+  border-top: 4px solid #B8B800;
 }
 #page-wrapper {
   margin-top: 60px;

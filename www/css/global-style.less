@@ -3,7 +3,7 @@ html, body {
 }
 
 @mainMenuHeight: 60px;
-@mainMenuBackground: #FFFFF5;
+@mainMenuBackground: #242424;
 
 nav#main-menu {
     position: fixed;
@@ -12,6 +12,7 @@ nav#main-menu {
     right: 0;
     height: @mainMenuHeight;
     background-color: @mainMenuBackground;
+    z-index: 1000;
 
     .menu-items {
         height: 100%;
@@ -39,7 +40,7 @@ nav#main-menu {
             }
 
             &.active {
-                border-top: 4px solid #B8B800 !important;
+                border-top: 4px solid #B8B800;
             }
         }
     }
