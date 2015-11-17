@@ -20,6 +20,8 @@ nav#main-menu {
         height: 100%;
         position: relative;
         padding: 0;
+        margin: 0;
+        float: left;
 
         li {
             display: inline-block;
@@ -29,7 +31,6 @@ nav#main-menu {
             font-size: 1.2em;
             color: #B8B800;
             border-top: 4px solid @mainMenuBackground;
-            line-height: calc(@mainMenuHeight - 4px);
 
             a {
                 color: #B8B800;
@@ -45,6 +46,13 @@ nav#main-menu {
                 border-top: 4px solid #B8B800;
             }
         }
+    }
+
+    .brand {
+        height: 100%;
+        float: left;
+        margin-right: 30px;
+        font-size: 1.4em;
     }
 }
 

@@ -17,6 +17,8 @@ nav#main-menu .menu-items {
   height: 100%;
   position: relative;
   padding: 0;
+  margin: 0;
+  float: left;
 }
 nav#main-menu .menu-items li {
   display: inline-block;
@@ -26,7 +28,6 @@ nav#main-menu .menu-items li {
   font-size: 1.2em;
   color: #B8B800;
   border-top: 4px solid #242424;
-  line-height: calc(56px);
 }
 nav#main-menu .menu-items li a {
   color: #B8B800;
@@ -38,6 +39,12 @@ nav#main-menu .menu-items li:hover {
 }
 nav#main-menu .menu-items li.active {
   border-top: 4px solid #B8B800;
+}
+nav#main-menu .brand {
+  height: 100%;
+  float: left;
+  margin-right: 30px;
+  font-size: 1.4em;
 }
 #page-wrapper {
   margin-top: 60px;
