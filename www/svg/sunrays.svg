@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512px"
+   height="512px"
+   viewBox="-256 -256 512 512"
+   version="1.1"
+   id="svg4445"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sunrays.svg">
+  <metadata
+     id="metadata4482">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Burst</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4480"
+     showgrid="false"
+     inkscape:zoom="0.65186406"
+     inkscape:cx="374.81864"
+     inkscape:cy="132.41491"
+     inkscape:window-x="1672"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4445"
+     showborder="true"
+     borderlayer="false" />
+  <title
+     id="title4447">Burst</title>
+  <defs
+     id="defs4449">
+    <linearGradient
+       id="linearGradient6471"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#16dc4a;stop-opacity:1;"
+         offset="0"
+         id="stop6473" />
+    </linearGradient>
+    <g
+       id="burst">
+      <g
+         id="quad">
+        <path
+           id="ray"
+           d="M0,0 -69,-500 69,-500 z" />
+        <use
+           xlink:href="#ray"
+           transform="rotate(30)"
+           id="use4454" />
+        <use
+           xlink:href="#ray"
+           transform="rotate(60)"
+           id="use4456" />
+        <use
+           xlink:href="#ray"
+           transform="rotate(90)"
+           id="use4458" />
+      </g>
+      <use
+         xlink:href="#quad"
+         transform="rotate(120)"
+         id="use4460" />
+      <use
+         xlink:href="#quad"
+         transform="rotate(240)"
+         id="use4462" />
+    </g>
+    <!-- a circle mask -->
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6597"
+       x="-0.0036373067"
+       width="1.0072746"
+       y="-0.0036373067"
+       height="1.0072746">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.5155445"
+         id="feGaussianBlur6599" />
+    </filter>
+  </defs>
+  <!-- added a mask and scaled it to a different aspect ratio below. scale(x,y) -->
+  <g
+     id="g6616">
+    <use
+       style="fill:#000000;fill-opacity:1;opacity:0.207;filter:url(#filter6597)"
+       transform="matrix(1,0,0,0.75,4.2618932,14.846147)"
+       xlink:href="#burst"
+       id="use4474"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       fill="lightslateblue" />
+    <use
+       clip-path="none"
+       xlink:href="#burst"
+       transform="matrix(0.50140683,0.13386251,-0.13435155,0.49958167,-0.34029293,-0.4944743)"
+       id="use4476"
+       style="opacity:0;fill:#000000;fill-opacity:1"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>
