@@ -5,7 +5,7 @@
 
 	<ul class="menu-items left-menu-items">
 		<li class="active"><a href="{$base}">Hlavní stránka</a></li>
-		<li><a href="{$base}#contact-block">Kontakt</a></li>
+		<li><a href="{if !($controller == 'Homepage' && $action == 'default')}{$base}{/if}#kontakt">Kontakt</a></li>
 		<li><a href="{$base}">Obchod</a></li>
 		<li><a href="{$base}">Půjčovna</a></li>
 	</ul>
