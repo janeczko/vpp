@@ -8,14 +8,19 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="Jan Janeczko, Richard Kubný">
-		<base href="{$public}/">
+		<base href="{$base}/">
 
-		<link rel="stylesheet" href="css/uikit.min.css">
-		<link rel="stylesheet" href="css/global-style.css">
+		<link rel="stylesheet" href="www/css/uikit.min.css">
+		<link rel="stylesheet" href="www/css/global-style.css">
+		<link n:if="$baseCssExists" rel="stylesheet" href="{$baseCssPath}">
 		{block headstyle}{/block}
 
-		<script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/uikit.min.js"></script>
+		<script src="www/js/jquery-2.1.4.min.js"></script>
+		<script src="www/js/uikit.min.js"></script>
+		<script>
+			var basePath = {$base};
+			var publicPath = {$public};
+		</script>
 		{block headscript}{/block}
 
 		<title>{ifset title}{include title|striptags} | {/ifset}Vše Pro Párty</title>
@@ -29,7 +34,8 @@
 
 		{include 'components/footer.latte'}
 
-		<script src="js/global-scripts.js"></script>
+		<script src="www/js/global-scripts.js"></script>
+		<script n:if="$baseJsExists" src="{$baseJsPath}"></script>
 		{block bodyscript}{/block}
 	</body>
 </html>

@@ -16,7 +16,7 @@ nav#main-menu {
     background-color: @mainMenuBackground;
     z-index: 1000;
 
-    .menu-items {
+    .menu-items, .right-menu-items {
         height: 100%;
         position: relative;
         padding: 0;
@@ -53,11 +53,15 @@ nav#main-menu {
         }
     }
 
+    .right-menu-items {
+        float: right;
+    }
+
     .brand {
         display: table;
         height: 100%;
         float: left;
-        margin-right: 30px;
+        margin-right: 100px;
         margin-left: 30px;
         font-size: 1.4em;
         color: #B8B800;

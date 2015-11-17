@@ -53,6 +53,13 @@ abstract class BasePresenter extends Presenter
 
         $this->template->base = $this->basePath;
         $this->template->public = $this->publicPath;
+        $this->template->action = $this->getAction();
+        $this->template->controller = $this->getName();
+        $this->template->baseCssPath = 'www/css/' . strtolower($this->getName() . '-' . $this->getAction()) . '.css';
+        $this->template->baseCssExists = file_exists($this->template->baseCssPath);
+        $this->template->baseJsPath = 'www/js/' . strtolower($this->getName() . '-' . $this->getAction()) . '.js';
+        $this->template->baseJsExists = file_exists($this->template->baseJsPath);
+
     }
 
     /**
