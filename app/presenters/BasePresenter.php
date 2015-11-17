@@ -13,6 +13,8 @@ use Nette,
  */
 abstract class BasePresenter extends Presenter
 {
+    const GOOGLE_MAPS_KEY = 'AIzaSyB9V3Oag-_obqJ8JH5Ol0QbNAGGpGKFJrM';
+
     /** @var string */
     protected $basePath;
 
@@ -55,6 +57,7 @@ abstract class BasePresenter extends Presenter
         $this->template->public = $this->publicPath;
         $this->template->action = $this->getAction();
         $this->template->controller = $this->getName();
+        $this->template->googleMapsKey = self::GOOGLE_MAPS_KEY;
         $this->template->baseCssPath = 'www/css/' . strtolower($this->getName() . '-' . $this->getAction()) . '.css';
         $this->template->baseCssExists = file_exists($this->template->baseCssPath);
         $this->template->baseJsPath = 'www/js/' . strtolower($this->getName() . '-' . $this->getAction()) . '.js';

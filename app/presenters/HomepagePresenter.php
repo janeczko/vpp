@@ -8,6 +8,13 @@ class HomepagePresenter extends BasePresenter
 {
 	public function renderDefault()
 	{
-        $this->render();
+        $this->render([
+            'animationTime' => (object) [
+                'balloons' => (object) [
+                    'h' => 90,
+                    'v' => 30
+                ]
+            ]
+        ]);
 	}
 }

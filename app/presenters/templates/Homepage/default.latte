@@ -2,6 +2,7 @@
 	<div class="uk-grid">
 		<div id="logo-block" class="uk-width-1-1">
 			<h1>vše<br/>PRO PÁRTY</h1>
+			<img class="balloons" src="www/svg/party_balloons.svg" alt="party_balloons.svg">
 		</div>
 
 		<div id="desc-block" class="uk-width-1-1">
@@ -15,10 +16,25 @@
 		<div id="map-block" class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
 			<iframe class="map"
 					frameborder="0"
-					style="border:0"
-					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaU4XLAXoE0cRvmed5uOfhOQ&key=AIzaSyB9V3Oag-_obqJ8JH5Ol0QbNAGGpGKFJrM"
+					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaU4XLAXoE0cRvmed5uOfhOQ&key={$googleMapsKey}"
 					allowfullscreen>
 			</iframe>
 		</div>
 	</div>
+{/block}
+
+{block headstyle}
+	<style>
+		#logo-block .balloons {
+			transition: left {$animationTime->balloons->h}s linear, top {$animationTime->balloons->v}s linear;
+		}
+	</style>
+{/block}
+
+{block bodyscript}
+	<script>
+		$(function() {
+			balloonsAnimate({$animationTime->balloons->h}, {$animationTime->balloons->v});
+		});
+	</script>
 {/block}
