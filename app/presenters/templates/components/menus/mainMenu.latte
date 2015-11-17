@@ -1,11 +1,13 @@
+{var $isHomepageDefault = $controller == 'Homepage' && $action == 'default'}
+
 <nav id="main-menu">
 	<div class="brand">
 		<span>Vše Pro Párty</span>
 	</div>
 
 	<ul class="menu-items left-menu-items">
-		<li class="active"><a href="{$base}">Hlavní stránka</a></li>
-		<li><a href="{if !($controller == 'Homepage' && $action == 'default')}{$base}{/if}#kontakt">Kontakt</a></li>
+		<li class="active"><a href="{if !$isHomepageDefault}{$base}{/if}">Hlavní stránka</a></li>
+		<li><a href="{if !$isHomepageDefault}{$base}{/if}#kontakt">Kontakt</a></li>
 		<li><a href="{$base}">Obchod</a></li>
 		<li><a href="{$base}">Půjčovna</a></li>
 	</ul>
