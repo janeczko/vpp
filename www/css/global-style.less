@@ -6,6 +6,8 @@ html, body {
 
 @mainMenuHeight: 60px;
 @mainMenuBackground: #242424;
+@yellowLight: #FFFF36;
+@yellowDark: #B8B800;
 
 nav#main-menu {
     position: fixed;
@@ -30,25 +32,25 @@ nav#main-menu {
             padding: 0 15px 0 15px;
             font-weight: bold;
             font-size: 1.2em;
-            color: #B8B800;
+            color: @yellowLight;
             border-top: 6px solid @mainMenuBackground;
             border-bottom: 6px solid @mainMenuBackground;
             vertical-align: middle;
 
             a {
-                color: #B8B800;
+                color: @yellowLight;
                 text-decoration: none;
             }
 
             &:hover {
                 cursor: pointer;
-                border-top: 6px solid #B8B800;
-                border-bottom: 6px solid #B8B800;
+                border-top: 6px solid @yellowLight;
+                border-bottom: 6px solid @yellowLight;
             }
 
             &.active {
-                border-top: 6px solid #B8B800;
-                border-bottom: 6px solid #B8B800;
+                border-top: 6px solid @yellowLight;
+                border-bottom: 6px solid @yellowLight;
             }
         }
     }
@@ -64,9 +66,9 @@ nav#main-menu {
         margin-right: 100px;
         margin-left: 30px;
         font-size: 1.4em;
-        color: #B8B800;
+        color: @yellowLight;
         font-weight: bold;
-        text-shadow: 1px 1px yellow;
+        text-shadow: 1px 1px @yellowDark;
         margin-top: -4px;
 
         & > span {
