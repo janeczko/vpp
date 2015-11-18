@@ -42,7 +42,25 @@
 }
 #desc-block {
   background-color: #2B2B2B;
-  height: 400px;
+  min-height: 400px;
+  padding: 60px 30px 30px 65px;
+}
+#desc-block .desc-list {
+  list-style-type: none;
+  color: #FFFF36;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+#desc-block .desc-list li {
+  margin-bottom: 60px;
+}
+#desc-block .desc-list li:nth-child(odd) {
+  color: #FFFF36;
+  text-shadow: 1px 1px red;
+}
+#desc-block .desc-list li:nth-child(even) {
+  color: red;
+  text-shadow: 1px 1px #FFFF36;
 }
 #gallery-block {
   background-color: #FFFF36;
