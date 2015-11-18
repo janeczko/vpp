@@ -1,3 +1,6 @@
+@logoHeight: 400px;
+@headlineTop: 110px;
+
 @keyframes headlineDown {
     0% {
         top: 0;
@@ -7,13 +10,13 @@
         opacity: 1;
     }
     100% {
-        top: 220px;
+        top: @headlineTop;
         opacity: 1;
     }
 }
 
 #logo-block {
-    height: 600px;
+    height: @logoHeight;
     position: relative;
     background: url(../svg/sunrays.svg) #FFFF36 center;
     background-size: cover;
@@ -40,7 +43,7 @@
 
     .balloons {
         position: absolute;
-        top: 110px;
+        top: 20px;
         left: 55px;
         height: 210px;
         width: 230px;
@@ -52,17 +55,50 @@
     height: 400px;
 }
 
-#kontakt, #map-block {
+#gallery-block {
+    background-color: #FFFF36;
     height: 400px;
 }
 
+#kontakt, #map-block {
+    height: 400px;
+    border-top: 2px solid #2B2B2B;
+    border-bottom: 2px solid #2B2B2B;
+}
+
 #kontakt {
-    background-color: #FFFF36;
+    background-color: #2B2B2B;
     padding: 25px 25px 25px 60px;
+    color: yellow;
+    font-size: 1.2em;
+
+    table {
+        border-collapse: separate;
+        border-spacing: 10px 30px;
+
+        td {
+            color: #FFFF36;
+        }
+    }
+
+    h2 {
+        color: #FFFF36;
+    }
+
+    a {
+        color: #FFFF36;
+        text-decoration: underline;
+
+        &:hover {
+            color: yellow;
+            font-weight: bold;
+        }
+    }
 
     h2 {
         font-size: 2.7em;
         font-weight: bold;
+        margin-bottom: 20px;
     }
 }
 

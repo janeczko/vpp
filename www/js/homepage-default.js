@@ -6,7 +6,7 @@ function balloonsAnimate(horizontalTime, verticalTime) {
     var pos = {
         left: '55px',
         right: (window.innerWidth - 230) + 'px',
-        top: '110px',
+        top: '20px',
         bottom: ($('#logo-block').height() - 220) + 'px'
     };
 
@@ -35,3 +35,9 @@ function balloonsAnimate(horizontalTime, verticalTime) {
         }
     }, (verticalTime == undefined ? horizontalTime : verticalTime) * 1000);
 }
+
+$(function() {
+
+    balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
+
+});

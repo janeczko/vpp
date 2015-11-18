@@ -9,8 +9,36 @@
 
 		</div>
 
+		<div id="gallery-block" class="uk-width-1-1">
+			Galerie
+		</div>
+
 		<div id="kontakt" class="uk-width-large-2-3 uk-width-medium-1-2 uk-width-small-1-1">
-			<h2>Kontakt</h2>
+			<div class="uk-grid">
+				<div class="uk-width-1-1">
+					<h2>Kontakt</h2>
+				</div>
+				<div class="uk-width-1-1">
+					<table class="uk-table">
+						<tr>
+							<th class="uk-text-right">Adresa</th>
+							<td>Městský kopec 145, 74301 Bílovec</td>
+						</tr>
+						<tr>
+							<th class="uk-text-right">Otevírací doba</th>
+							<td><strong>po-pá:</strong> 9:00-16:30</td>
+						</tr>
+						<tr>
+							<th class="uk-text-right">Telefon</th>
+							<td>607505345</td>
+						</tr>
+						<tr>
+							<th class="uk-text-right">E-mail</th>
+							<td><a href="mailto:proparty@seznam.cz">proparty@seznam.cz</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
 		</div>
 
 		<div id="map-block" class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
@@ -26,15 +54,15 @@
 {block headstyle}
 	<style>
 		#logo-block .balloons {
-			transition: left {$animationTime->balloons->h}s linear, top {$animationTime->balloons->v}s linear;
+			transition: left {$animationTime->balloons->h}s, top {$animationTime->balloons->v}s;
 		}
 	</style>
 {/block}
 
 {block bodyscript}
+	<script src="www/js/components/slideshow.min.js"></script>
 	<script>
-		$(function() {
-			balloonsAnimate({$animationTime->balloons->h}, {$animationTime->balloons->v});
-		});
+		var animationTimeHorizontal = {$animationTime->balloons->h};
+		var animationTimeVertical = {$animationTime->balloons->v};
 	</script>
 {/block}
