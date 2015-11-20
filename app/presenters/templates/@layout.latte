@@ -26,7 +26,7 @@
 
 		<title>{ifset title}{include title|striptags} | {/ifset}Vše Pro Párty</title>
 	</head>
-	<body>
+	<body onhashchange="changeMenuActive()">
 		{include 'components/menus/mainMenu.latte'}
 
 		<div id="page-wrapper">

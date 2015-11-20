@@ -8,6 +8,8 @@ class EshopPresenter extends BasePresenter
 {
     public function renderDefault()
     {
+        $this->setActiveMenuItem('Eshop');
+
         $this->render();
     }
 }

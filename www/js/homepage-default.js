@@ -42,4 +42,8 @@ $(function() {
         //balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
     }
 
+    if (window.location.hash) {
+        changeMenuActive();
+    }
+
 });

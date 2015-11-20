@@ -1,5 +1,11 @@
-$(function() {
+function changeMenuActive() {
+    var menu = $("#main-menu .menu-items");
 
+    menu.find('li').removeClass('active');
+    menu.find('li.contact-link').addClass('active');
+}
+
+$(function() {
 
     $('.open-main-menu').click(function() {
         $('#main-menu .menu-items').toggleClass('opened');

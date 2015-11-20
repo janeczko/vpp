@@ -27,6 +27,9 @@ abstract class BasePresenter extends Presenter
     /** @var Model\User */
     protected $user;
 
+    /** @var string */
+    protected $activeMenuItem;
+
     /**
      * @param Context $database
      */
@@ -44,6 +47,7 @@ abstract class BasePresenter extends Presenter
         $this->basePath = $this->template->basePath;
         $this->publicPath = $this->basePath . '/www';
         $this->user = parent::getUser();
+        $this->activeMenuItem = 'Homepage';
 
         if ($this->user->isLoggedIn())
             $this->user->startup();
@@ -62,7 +66,6 @@ abstract class BasePresenter extends Presenter
         $this->template->baseCssExists = file_exists($this->template->baseCssPath);
         $this->template->baseJsPath = 'www/js/' . strtolower($this->getName() . '-' . $this->getAction()) . '.js';
         $this->template->baseJsExists = file_exists($this->template->baseJsPath);
-
     }
 
     /**
@@ -76,6 +79,8 @@ abstract class BasePresenter extends Presenter
 
         foreach ($data as $key => $value)
             $this->template->{$key} = $value;
+
+        $this->template->activeMenuItem = $this->activeMenuItem;
     }
 
     /**
@@ -85,5 +90,13 @@ abstract class BasePresenter extends Presenter
     protected function genUrl($url)
     {
         return $this->basePath . '/' . $url;
+    }
+
+    /**
+     * @param string $itemName
+     */
+    protected function setActiveMenuItem($itemName)
+    {
+        $this->activeMenuItem = $itemName;
     }
 }

@@ -6,9 +6,9 @@
 	</div>
 
 	<ul class="menu-items left-menu-items">
-		<li class="active"><a href="{if !$isHomepageDefault}{$base}{/if}">Hlavní stránka</a></li>
-		<li><a href="{if !$isHomepageDefault}{$base}{/if}#kontakt">Kontakt</a></li>
-		<li><a href="{$base}/eshop">Obchod</a></li>
+		<li class="{if $activeMenuItem == 'Homepage'}active{/if}"><a href="{if !$isHomepageDefault}{$base}{/if}">Hlavní stránka</a></li>
+		<li class="contact-link"><a href="{if !$isHomepageDefault}{$base}{/if}#kontakt">Kontakt</a></li>
+		<li class="{if $activeMenuItem == 'Eshop'}active{/if}"><a href="{$base}/eshop">Obchod</a></li>
 		<li><a href="{$base}">Půjčovna</a></li>
 		<li><a href=""><i class="uk-icon-shopping-cart uk-icon-small"></i>&nbsp;&nbsp;&nbsp;Košík</a></li>
 		<li><a href=""><i class="uk-icon-user uk-icon-small"></i>&nbsp;&nbsp;&nbsp;Přihlášení</a></li>
