@@ -19,8 +19,8 @@
 		<script src="www/js/jquery-2.1.4.min.js"></script>
 		<script src="www/js/uikit.min.js"></script>
 		<script>
-			var basePath = {$base};
-			var publicPath = {$public};
+			var basePath = '{$base|noescape}';
+			var publicPath = '{$public|noescape}';
 		</script>
 		{block headscript}{/block}
 
