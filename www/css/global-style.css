@@ -13,51 +13,84 @@ nav#main-menu {
   background-color: #242424;
   z-index: 1000;
 }
-nav#main-menu .menu-items,
-nav#main-menu .right-menu-items {
-  height: 100%;
-  position: relative;
+nav#main-menu .menu-items {
   padding: 0;
   margin: 0;
-  float: left;
-  display: table;
 }
-nav#main-menu .menu-items li,
-nav#main-menu .right-menu-items li {
-  display: table-cell;
-  height: 100%;
-  padding: 0 15px 0 15px;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #FFFF36;
-  border-top: 6px solid #242424;
-  border-bottom: 6px solid #242424;
-  vertical-align: middle;
+@media screen and (max-width: 959px) {
+  nav#main-menu .menu-items {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: block;
+    list-style-type: none;
+    z-index: 1000;
+    background-color: #242424;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.45s linear;
+  }
+  nav#main-menu .menu-items li {
+    background-color: #242424;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #242424;
+    border-bottom: 1px solid #242424;
+    font-weight: bold;
+  }
+  nav#main-menu .menu-items li:hover,
+  nav#main-menu .menu-items li.active {
+    background-color: #FFFF36;
+    color: #242424;
+    cursor: pointer;
+  }
+  nav#main-menu .menu-items li:hover a,
+  nav#main-menu .menu-items li.active a {
+    color: #242424;
+  }
+  nav#main-menu .menu-items.opened {
+    height: 100%;
+    transition: height 0.45s linear;
+  }
 }
-nav#main-menu .menu-items li a,
-nav#main-menu .right-menu-items li a {
+@media screen and (min-width: 960px) {
+  nav#main-menu .menu-items {
+    position: relative;
+    float: left;
+    display: table;
+    height: 100%;
+  }
+  nav#main-menu .menu-items li {
+    display: table-cell;
+    height: 100%;
+    padding: 0 15px 0 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #FFFF36;
+    border-top: 6px solid #242424;
+    border-bottom: 6px solid #242424;
+    vertical-align: middle;
+  }
+  nav#main-menu .menu-items li:hover {
+    cursor: pointer;
+    border-top: 6px solid #FFFF36;
+    border-bottom: 6px solid #FFFF36;
+  }
+  nav#main-menu .menu-items li.active {
+    border-top: 6px solid #FFFF36;
+    border-bottom: 6px solid #FFFF36;
+  }
+}
+nav#main-menu .menu-items li a {
   color: #FFFF36;
   text-decoration: none;
-}
-nav#main-menu .menu-items li:hover,
-nav#main-menu .right-menu-items li:hover {
-  cursor: pointer;
-  border-top: 6px solid #FFFF36;
-  border-bottom: 6px solid #FFFF36;
-}
-nav#main-menu .menu-items li.active,
-nav#main-menu .right-menu-items li.active {
-  border-top: 6px solid #FFFF36;
-  border-bottom: 6px solid #FFFF36;
-}
-nav#main-menu .right-menu-items {
-  float: right;
 }
 nav#main-menu .brand {
   display: table;
   height: 100%;
   float: left;
-  margin-right: 100px;
+  margin-right: 50px;
   margin-left: 30px;
   font-size: 1.4em;
   color: #FFFF36;
@@ -69,6 +102,25 @@ nav#main-menu .brand > span {
   display: table-cell;
   vertical-align: middle;
 }
+.open-main-menu {
+  position: fixed;
+  padding: 15px;
+  margin-right: 10px;
+  top: 0;
+  right: 0;
+  color: #FFFF36;
+}
+.open-main-menu:hover {
+  color: orange;
+}
+@media screen and (min-width: 960px) {
+  .open-main-menu {
+    display: none;
+  }
+}
 #page-wrapper {
   margin-top: 60px;
+}
+.display-none {
+  display: none;
 }

@@ -1,3 +1,6 @@
+@import "colors";
+@import "media-queries";
+
 @logoHeight: 400px;
 @headlineTop: 110px;
 
@@ -18,7 +21,7 @@
 #logo-block {
     height: @logoHeight;
     position: relative;
-    background: url(../svg/sunrays.svg) #FFFF36 center;
+    background: url(../svg/sunrays.svg) @yellowLight center;
     background-size: cover;
     overflow: hidden;
 
@@ -31,7 +34,7 @@
         opacity: 0;
         animation: headlineDown 1.5s forwards linear;
         text-align: center;
-        color: yellow;
+        color: @yellow;
         font-size: 6em;
         line-height: 1em;
         font-family: "Times New Roman";
@@ -47,6 +50,10 @@
         left: 55px;
         height: 210px;
         width: 230px;
+        
+        @media @small {
+            display: none;
+        }
     }
 }
 
@@ -57,7 +64,7 @@
 
     .desc-list {
         list-style-type: none;
-        color: #FFFF36;
+        color: @yellowLight;
         font-size: 1.4em;
         font-weight: bold;
 
@@ -65,20 +72,20 @@
             margin-bottom: 60px;
 
             &:nth-child(odd) {
-                color: #FFFF36;
+                color: @yellowLight;
                 text-shadow: 1px 1px red;
             }
 
             &:nth-child(even) {
                 color: red;
-                text-shadow: 1px 1px #FFFF36;
+                text-shadow: 1px 1px @yellowLight;
             }
         }
     }
 }
 
 #gallery-block {
-    background-color: #FFFF36;
+    background-color: @yellowLight;
     height: 400px;
 }
 
@@ -91,7 +98,7 @@
 #kontakt {
     background-color: #2B2B2B;
     padding: 25px 25px 25px 60px;
-    color: yellow;
+    color: @yellow;
     font-size: 1.2em;
 
     table {
@@ -99,21 +106,20 @@
         border-spacing: 10px 30px;
 
         td {
-            color: #FFFF36;
+            color: @yellowLight;
         }
     }
 
     h2 {
-        color: #FFFF36;
+        color: @yellowLight;
     }
 
     a {
-        color: #FFFF36;
+        color: @yellowLight;
         text-decoration: underline;
 
         &:hover {
-            color: yellow;
-            font-weight: bold;
+            color: orange;
         }
     }
 

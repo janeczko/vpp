@@ -40,6 +40,11 @@
   height: 210px;
   width: 230px;
 }
+@media screen and (max-width: 767px) {
+  #logo-block .balloons {
+    display: none;
+  }
+}
 #desc-block {
   background-color: #2B2B2B;
   min-height: 400px;
@@ -93,8 +98,7 @@
   text-decoration: underline;
 }
 #kontakt a:hover {
-  color: yellow;
-  font-weight: bold;
+  color: orange;
 }
 #kontakt h2 {
   font-size: 2.7em;

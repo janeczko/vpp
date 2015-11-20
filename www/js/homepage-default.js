@@ -38,6 +38,6 @@ function balloonsAnimate(horizontalTime, verticalTime) {
 
 $(function() {
 
-    //balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
+    balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
 
 });
