@@ -39,7 +39,7 @@ function balloonsAnimate(horizontalTime, verticalTime) {
 $(function() {
 
     if (window.innerWidth >= 768) {
-        balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
+        //balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
     }
 
 });
