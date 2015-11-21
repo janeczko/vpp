@@ -75,7 +75,7 @@ $(function() {
     });
 
     if (window.innerWidth >= 768) {
-        //balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
+        balloonsAnimate(animationTimeHorizontal, animationTimeVertical);
     }
 
     if (window.location.hash) {

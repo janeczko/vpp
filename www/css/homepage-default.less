@@ -127,16 +127,32 @@
     }
 
     .image-views {
-        height: 300px;
-        width: 399px;
         margin: 50px auto 0 auto;
         padding: 0;
+
+        @media @large {
+            height: 300px;
+            width: 399px;
+
+            img {
+                width: 127px;
+                height: 94px;
+            }
+        }
+
+        @media @small-medium {
+            width: 300px;
+            height: 225px;
+
+            img {
+                width: 94px;
+                height: 69px;
+            }
+        }
 
         img {
             float: left;
             padding: 0;
-            width: 127px;
-            height: 94px;
             margin: 2px;
             border: 1px solid @almostBlack;
         }
@@ -146,8 +162,15 @@
         height: 50px;
         margin: 5px auto 0 auto;
         padding: 0;
-        width: 399px;
         text-align: center;
+
+        @media @large {
+            width: 399px;
+        }
+
+        @media @small-medium {
+            width: 300px;
+        }
 
         a {
             color: @almostBlack;
