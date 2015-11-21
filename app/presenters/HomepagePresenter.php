@@ -2,10 +2,14 @@
 
 namespace App\Presenters;
 
-use Nette;
+use Nette,
+    App\Model;
 
 class HomepagePresenter extends BasePresenter
 {
+    /** @var Model\Gallery @inject */
+    public $galleryModel;
+
 	public function renderDefault()
 	{
         $this->render([
@@ -14,7 +18,8 @@ class HomepagePresenter extends BasePresenter
                     'h' => 90,
                     'v' => 30
                 ]
-            ]
+            ],
+            'galleryItems' => $this->galleryModel->getItems()
         ]);
 	}
 }
