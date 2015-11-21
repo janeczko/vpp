@@ -15,6 +15,7 @@
 						<li>Zajistíme pro vás nebo oslavence výzdobu dle Vašeho přání nebo tématu</li>
 					</ul>
 				</div>
+
 				<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 					<ul class="desc-list">
 						<li>Půjčovna karnevalových kostýmů a doplňků</li>
@@ -26,15 +27,37 @@
 		</div>
 
 		<div id="gallery-block" class="uk-width-1-1">
-			<div class="uk-slidenav-position gallery" data-uk-slideshow="{ kenburns: true }">
-				<ul class="uk-slideshow">
-					<li n:foreach="$galleryItems as $item"><img src="www/{$item->path}" alt="{$item->name}"></li>
-				</ul>
-				<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous" style="color: rgba(255,255,255,0.4)"></a>
-				<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next" style="color: rgba(255,255,255,0.4)"></a>
-				<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
-					<li n:foreach="$galleryItems as $item" data-uk-slideshow-item="{$iterator->counter - 1}"><a></a></li>
-				</ul>
+			<div class="uk-grid">
+				<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+					<div class="uk-slidenav-position gallery" data-uk-slideshow="{ kenburns: true }">
+						<ul class="uk-slideshow">
+							<li n:foreach="$galleryItems as $item"><img class="gallery-item" src="www/{$item->path}" alt="{$item->name}"></li>
+						</ul>
+						<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous" style="color: rgba(255,255,255,0.4)"></a>
+						<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next" style="color: rgba(255,255,255,0.4)"></a>
+						<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+							<li n:foreach="$galleryItems as $item" data-uk-slideshow-item="{$iterator->counter - 1}"><a></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1 image-views-gallery" data-view-maxcount="{count($imageViews)}">
+					{foreach $imageViews as $view}
+						<div class="image-views view-{$iterator->counter} {if !$iterator->first}display-none{/if}" data-view-counter="{$iterator->counter}">
+							{foreach $view as $image}
+								<a href="www/{$image->path}" data-uk-lightbox="{ group: 'imageViews' }" title="">
+									<img src="www/{$image->path}" alt="{$image->name}">
+								</a>
+							{/foreach}
+						</div>
+					{/foreach}
+
+					<div n:if="count($imageViews) > 1" class="image-changer">
+						<a><i class="uk-icon-chevron-left uk-icon-medium left"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a><i class="uk-icon-chevron-right uk-icon-medium right"></i></a>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -43,6 +66,7 @@
 				<div class="uk-width-1-1">
 					<h2>Kontakt</h2>
 				</div>
+
 				<div class="uk-width-1-1">
 					<table class="uk-table">
 						<tr>
@@ -66,10 +90,11 @@
 			</div>
 		</div>
 
+		{* TODO - odkaz na mapu potom odomentovat *}
 		<div id="map-block" class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
 			<iframe class="map"
 					frameborder="0"
-					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaU4XLAXoE0cRvmed5uOfhOQ&key={$googleMapsKey}"
+					{*src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaU4XLAXoE0cRvmed5uOfhOQ&key={$googleMapsKey}"*}
 					allowfullscreen>
 			</iframe>
 		</div>
@@ -89,10 +114,13 @@
 {/block}
 
 {block bodyscript}
-	<script src="www/js/components/slideshow.js"></script>
-	<script src="www/js/components/slideshow-fx.js"></script>
+	<script src="www/js/components/slideshow.min.js"></script>
+	<script src="www/js/components/slideshow-fx.min.js"></script>
+	<script src="www/js/components/lightbox.min.js"></script>
+
 	<script>
 		var animationTimeHorizontal = {$animationTime->balloons->h};
 		var animationTimeVertical = {$animationTime->balloons->v};
+		var animationTimeGallery = {$animationTime->gallery};
 	</script>
 {/block}

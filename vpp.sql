@@ -5,22 +5,27 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-DROP DATABASE IF EXISTS `vpp`;
-CREATE DATABASE `vpp` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_czech_ci */;
-USE `vpp`;
-
 DROP TABLE IF EXISTS `gallery_items`;
 CREATE TABLE `gallery_items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `image_id` int(10) unsigned NOT NULL,
+  `in_carousel` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
-INSERT INTO `gallery_items` (`id`, `image_id`) VALUES
-(1,	1),
-(2,	2),
-(3,	3),
-(4,	4);
+INSERT INTO `gallery_items` (`id`, `image_id`, `in_carousel`) VALUES
+(1,	1,	1),
+(2,	2,	1),
+(3,	3,	1),
+(4,	4,	1),
+(5,	1,	0),
+(6,	3,	0),
+(7,	4,	0),
+(8,	2,	0),
+(9,	1,	0),
+(10,	4,	0),
+(11,	2,	0),
+(12,	3,	0);
 
 DROP TABLE IF EXISTS `image`;
 CREATE TABLE `image` (
@@ -49,4 +54,4 @@ CREATE TABLE `user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 
--- 2015-11-21 14:01:23
+-- 2015-11-21 17:54:55

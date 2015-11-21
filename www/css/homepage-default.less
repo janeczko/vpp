@@ -34,7 +34,7 @@
         opacity: 0;
         animation: headlineDown 1.5s forwards linear;
         text-align: center;
-        color: @yellow;
+        color: #ffd20e;
         font-size: 6em;
         line-height: 1em;
         font-family: "Times New Roman";
@@ -86,17 +86,75 @@
 
 #gallery-block {
     background-color: @yellowLight;
-    height: 400px;
     position: relative;
 
-    .gallery {
-        width: 400px !important;
-        height: 300px !important;
-        margin: 50px auto 50px auto;
+    @media @medium-large {
+        height: 400px;
+    }
 
-        img {
+    @media @small {
+        height: 800px;
+    }
+
+    .gallery {
+        @media @medium-large {
+            margin: 50px 0 50px 50px;
+        }
+
+        @media @small {
+            margin: 50px auto 50px auto;
+        }
+
+        @media @small-medium {
+            width: 350px !important;
+            height: 270px !important;
+
+            img.gallery-item {
+                width: 350px !important;
+                height: 270px !important;
+            }
+        }
+
+        @media @large {
             width: 400px !important;
             height: 300px !important;
+
+            img.gallery-item {
+                width: 400px !important;
+                height: 300px !important;
+            }
+        }
+    }
+
+    .image-views {
+        height: 300px;
+        width: 399px;
+        margin: 50px auto 0 auto;
+        padding: 0;
+
+        img {
+            float: left;
+            padding: 0;
+            width: 127px;
+            height: 94px;
+            margin: 2px;
+            border: 1px solid @almostBlack;
+        }
+    }
+
+    .image-changer {
+        height: 50px;
+        margin: 5px auto 0 auto;
+        padding: 0;
+        width: 399px;
+        text-align: center;
+
+        a {
+            color: @almostBlack;
+
+            &:hover {
+                color: orange;
+            }
         }
     }
 }
