@@ -1,5 +1,5 @@
 html {
-  background-color: rgba(255, 255, 54, 0.85);
+  background-color: rgba(255, 255, 54, 0.7);
 }
 #page-wrapper {
   position: relative;
@@ -9,6 +9,9 @@ html {
 }
 #eshop-menu-container {
   text-align: left;
+}
+#eshop-menu-container > ul {
+  position: fixed;
 }
 #eshop-menu-container .uk-parent a {
   color: #242424;
@@ -53,7 +56,44 @@ html {
 #product-section > .uk-grid > div {
   text-align: center;
 }
+#search-row {
+  height: 50px;
+}
+#search-row > input,
+#search-row select {
+  height: 35px;
+}
 #searchbox {
   padding: 0;
   font-size: 20px;
+  height: 35px;
+}
+#product-list > div {
+  padding: 5px;
+}
+#product-list .product {
+  height: 330px;
+  border: 1px solid orange;
+  border-radius: 8px;
+  padding-top: 8px;
+}
+#product-list .product:hover {
+  background-color: #FFFF36;
+}
+#product-list .product > img {
+  margin: 8px auto 24px auto;
+  display: block;
+}
+.into-cart i {
+  padding: 0 8px;
+  border-radius: 4px;
+}
+.into-cart i:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+@media screen and (max-width: 959px) {
+  #eshop-menu-container > ul {
+    position: initial;
+  }
 }

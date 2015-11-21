@@ -1,7 +1,7 @@
 @import "colors";
 @import "media-queries";
 
-@eshopBackground: rgba(255, 255, 54, 0.85);
+@eshopBackground: rgba(255, 255, 54, 0.7);
 
 html {
     background-color: @eshopBackground;
@@ -14,8 +14,13 @@ html {
 	background-size: cover;
 }
 
+
 #eshop-menu-container {
 	text-align: left;
+
+	& > ul {
+		position: fixed;
+	}
 
 	& .uk-parent {
 		& a {
@@ -76,7 +81,59 @@ html {
 	}
 }
 
+#search-row {
+	height: 50px;
+
+	& > input, select {
+		height: 35px;
+	}
+}
+
 #searchbox {
 	padding: 0;
 	font-size: 20px;
+	height: 35px;
 }
+
+
+#product-list {
+	& > div {
+		padding: 5px;
+	}
+
+	& .product {
+		height: 330px;
+		border: 1px solid orange;
+		border-radius: 8px;
+		padding-top: 8px;
+
+		&:hover {
+
+			background-color: @yellowLight;
+		}
+
+		& > img {
+			margin: 8px auto 24px auto;
+			display: block;
+		}
+	}
+}
+
+.into-cart  {
+	& i{
+		padding: 0 8px;
+		border-radius: 4px;
+	}
+
+	& i:hover {
+		background-color: gray;
+		cursor: pointer;
+	}
+}
+
+@media @small-medium {
+	#eshop-menu-container > ul {
+		position: initial;
+	}
+}
+
