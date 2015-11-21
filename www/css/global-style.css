@@ -39,7 +39,7 @@ nav#main-menu .menu-items {
   }
   nav#main-menu .menu-items li:hover,
   nav#main-menu .menu-items li.active {
-    background-color: #FFFF36;
+    background-color: #FFFF57;
     color: #242424;
     cursor: pointer;
   }
@@ -70,23 +70,23 @@ nav#main-menu .menu-items {
     padding: 0 15px 0 15px;
     font-weight: bold;
     font-size: 1.2em;
-    color: #FFFF36;
+    color: #FFFF57;
     border-top: 6px solid #242424;
     border-bottom: 6px solid #242424;
     vertical-align: middle;
   }
   nav#main-menu .menu-items li:hover {
     cursor: pointer;
-    border-top: 6px solid #FFFF36;
-    border-bottom: 6px solid #FFFF36;
+    border-top: 6px solid #FFFF57;
+    border-bottom: 6px solid #FFFF57;
   }
   nav#main-menu .menu-items li.active {
-    border-top: 6px solid #FFFF36;
-    border-bottom: 6px solid #FFFF36;
+    border-top: 6px solid #FFFF57;
+    border-bottom: 6px solid #FFFF57;
   }
 }
 nav#main-menu .menu-items li a {
-  color: #FFFF36;
+  color: #FFFF57;
   text-decoration: none;
 }
 nav#main-menu .brand {
@@ -96,7 +96,7 @@ nav#main-menu .brand {
   margin-right: 50px;
   margin-left: 30px;
   font-size: 1.4em;
-  color: #FFFF36;
+  color: #FFFF57;
   font-weight: bold;
   text-shadow: 1px 1px #B8B800;
   margin-top: -2px;
@@ -111,7 +111,7 @@ nav#main-menu .brand > span {
   margin-right: 10px;
   top: 0;
   right: 0;
-  color: #FFFF36;
+  color: #FFFF57;
 }
 .open-main-menu:hover {
   color: orange;
@@ -152,11 +152,11 @@ nav#main-menu .brand > span {
   }
 }
 .right-menu-items li {
-  color: #FFFF36;
+  color: #FFFF57;
   vertical-align: middle;
 }
 .right-menu-items li a {
-  color: #FFFF36;
+  color: #FFFF57;
   text-decoration: none;
 }
 @media screen and (min-width: 960px) {
@@ -179,7 +179,7 @@ nav#main-menu .brand > span {
     transition: top 0.4s linear;
   }
   #search-panel .uk-button {
-    background-color: #FFFF36;
+    background-color: #FFFF57;
   }
   #search-panel .uk-button:hover {
     background-color: rgba(255, 255, 54, 0.8);

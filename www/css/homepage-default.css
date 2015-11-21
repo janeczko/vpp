@@ -14,7 +14,7 @@
 #logo-block {
   height: 400px;
   position: relative;
-  background: url(../svg/sunrays.svg) #FFFF36 center;
+  background: url(../svg/sunrays.svg) #FFFF57 center;
   background-size: cover;
   overflow: hidden;
 }
@@ -52,7 +52,7 @@
 }
 #desc-block .desc-list {
   list-style-type: none;
-  color: #FFFF36;
+  color: #FFFF57;
   font-size: 1.4em;
   font-weight: bold;
 }
@@ -60,15 +60,15 @@
   margin-bottom: 60px;
 }
 #desc-block .desc-list li:nth-child(odd) {
-  color: #FFFF36;
+  color: #FFFF57;
   text-shadow: 1px 1px red;
 }
 #desc-block .desc-list li:nth-child(even) {
   color: red;
-  text-shadow: 1px 1px #FFFF36;
+  text-shadow: 1px 1px #FFFF57;
 }
 #gallery-block {
-  background-color: #FFFF36;
+  background-color: #FFFF57;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -180,13 +180,13 @@
   border-spacing: 10px 30px;
 }
 #kontakt table td {
-  color: #FFFF36;
+  color: #FFFF57;
 }
 #kontakt h2 {
-  color: #FFFF36;
+  color: #FFFF57;
 }
 #kontakt a {
-  color: #FFFF36;
+  color: #FFFF57;
   text-decoration: underline;
 }
 #kontakt a:hover {
