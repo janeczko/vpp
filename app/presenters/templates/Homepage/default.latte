@@ -25,22 +25,16 @@
 			</div>
 		</div>
 
-		<div class="uk-width-1-1">
-			<div id="gallery-block">
-				<div class="uk-grid">
-					<div class="uk-width-1-2">
-						<div class="uk-slidenav-position" data-uk-slideshow>
-							<ul class="uk-slideshow">
-								<li n:foreach="$galleryItems as $item"><img src="www/{$item->path}" width="300" height="180" alt="{$item->name}"></li>
-							</ul>
-							<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous" style="color: rgba(255,255,255,0.4)"></a>
-							<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next" style="color: rgba(255,255,255,0.4)"></a>
-							<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
-								<li n:foreach="$galleryItems as $item" data-uk-slideshow-item="{$iterator->counter - 1}"><a></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+		<div id="gallery-block" class="uk-width-1-1">
+			<div class="uk-slidenav-position gallery" data-uk-slideshow="{ animation: 'scroll' }">
+				<ul class="uk-slideshow">
+					<li n:foreach="$galleryItems as $item"><img src="www/{$item->path}" alt="{$item->name}"></li>
+				</ul>
+				<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous" style="color: rgba(255,255,255,0.4)"></a>
+				<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next" style="color: rgba(255,255,255,0.4)"></a>
+				<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+					<li n:foreach="$galleryItems as $item" data-uk-slideshow-item="{$iterator->counter - 1}"><a></a></li>
+				</ul>
 			</div>
 		</div>
 

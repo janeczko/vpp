@@ -67,6 +67,20 @@
   color: red;
   text-shadow: 1px 1px #FFFF36;
 }
+#gallery-block {
+  background-color: #FFFF36;
+  height: 400px;
+  position: relative;
+}
+#gallery-block .gallery {
+  width: 400px !important;
+  height: 300px !important;
+  margin: 50px auto 50px auto;
+}
+#gallery-block .gallery img {
+  width: 400px !important;
+  height: 300px !important;
+}
 #kontakt,
 #map-block {
   height: 400px;
