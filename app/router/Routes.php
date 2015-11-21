@@ -17,7 +17,7 @@ class Routes extends Object implements IRoutes
 //            'admin/prihlasit' => 'AdminUser:login',
 //            'admin/odhlasit' => 'AdminUser:logout',
 //            'admin/vytvorit-ucet' => 'AdminUser:register',
-
+            'eshop' => 'Eshop:default',
             '<presenter>/<action>[/<id>]' => 'Homepage:default'
         ];
     }
