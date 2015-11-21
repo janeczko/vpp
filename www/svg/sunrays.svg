@@ -42,7 +42,7 @@
      id="namedview4480"
      showgrid="false"
      inkscape:zoom="0.65186406"
-     inkscape:cx="374.81864"
+     inkscape:cx="140.87416"
      inkscape:cy="132.41491"
      inkscape:window-x="1672"
      inkscape:window-y="-8"
@@ -108,7 +108,8 @@
   </defs>
   <!-- added a mask and scaled it to a different aspect ratio below. scale(x,y) -->
   <g
-     id="g6616">
+     id="g6616"
+     style="opacity:0.478">
     <use
        style="fill:#000000;fill-opacity:1;opacity:0.207;filter:url(#filter6597)"
        transform="matrix(1,0,0,0.75,4.2618932,14.846147)"

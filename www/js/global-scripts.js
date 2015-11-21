@@ -19,4 +19,10 @@ $(function() {
         window.location = $(this).find('a').attr('href');
     });
 
+    $('.right-menu-items .open-search-panel').click(function() {
+        if (window.innerWidth >= 960) {
+            $('#search-panel').toggleClass('opened');
+        }
+    });
+
 });

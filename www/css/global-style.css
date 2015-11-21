@@ -52,6 +52,11 @@ nav#main-menu .menu-items {
     transition: height 0.45s linear;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  nav#main-menu .menu-items li {
+    width: 50%;
+  }
+}
 @media screen and (min-width: 960px) {
   nav#main-menu .menu-items {
     position: relative;
@@ -94,7 +99,7 @@ nav#main-menu .brand {
   color: #FFFF36;
   font-weight: bold;
   text-shadow: 1px 1px #B8B800;
-  margin-top: -4px;
+  margin-top: -2px;
 }
 nav#main-menu .brand > span {
   display: table-cell;
@@ -115,6 +120,73 @@ nav#main-menu .brand > span {
   .open-main-menu {
     display: none;
   }
+}
+@media screen and (min-width: 960px) {
+  .main-menu-tooltip {
+    top: 5px !important;
+  }
+}
+@media screen and (min-width: 960px) {
+  .right-menu-items {
+    display: table;
+    list-style-type: none;
+    padding: 0;
+    height: 60px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+  }
+  .right-menu-items li {
+    display: table-cell;
+    height: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 15px 0 15px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .right-menu-items {
+    display: none;
+  }
+}
+.right-menu-items li {
+  color: #FFFF36;
+  vertical-align: middle;
+}
+.right-menu-items li a {
+  color: #FFFF36;
+  text-decoration: none;
+}
+@media screen and (min-width: 960px) {
+  #search-panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 60px;
+    z-index: 999;
+    width: 30%;
+    background-color: #242424;
+    transition: top 0.4s linear;
+  }
+  #search-panel .uk-form {
+    margin: 0;
+    padding: 10px;
+  }
+  #search-panel.opened {
+    top: 60px;
+    transition: top 0.4s linear;
+  }
+  #search-panel .uk-button {
+    background-color: #FFFF36;
+  }
+  #search-panel .uk-button:hover {
+    background-color: rgba(255, 255, 54, 0.8);
+  }
+}
+#search-panel li:hover {
+  cursor: pointer;
 }
 #page-wrapper {
   margin-top: 60px;
