@@ -1,9 +1,66 @@
+
 {block title}E-shop{/block}
 
 {block content}
-	<div class="uk-grid">
-		<div class="uk-width-1-1">
-			<h2>E-shop</h2>
+    <div class="uk-container uk-container-center">
+    	<h2 id="eshop-logo">E-shop</h2>
+		<div class="uk-grid">
+			<aside id="eshop-menu-container" class="uk-width-medium-2-10">
+				{* abecedne serazene  *}
+				<ul class="uk-nav uk-nav-parent-icon" data-uk-nav="{ multiple:true }">
+					<li class="uk-parent">
+						<a href="#">Dekorace</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Balónky</a></li>
+							<li><a href="#">Girlandy</a></li>
+							<li><a href="#">Svíčky</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#">Kostýmy</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Klaun</a></li>
+							<li><a href="#">Pirátské</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#">Ostatní</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Talířky</a></li>
+                            <li><a href="#">Ubrousky</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			<section id="product-section" class="uk-width-medium-8-10 uk-container">
+				<div class="uk-grid">
+					<div class="uk-width-medium-7-10">
+						<span id="sort-by-label">Seřadit dle:</span>
+						{* select, bo ten jejich uk-dropdown nejak jebe... *}
+						<select id="sort-price">
+							<option>ceny</option>
+							<option>hodnocení</option>
+							<option>názvu</option>
+						</select>
+
+						<select>
+							<option>vzestupně</option>
+							<option>sestupně</option>
+						</select>
+					</div>
+					<div class="uk-width-medium-3-10">
+						<input id="searchbox" type="text" placeholder="...co hledáte?" />
+					</div>
+				</div>
+				<div id="product-list">
+					produkty = [u][i][i][i][i]
+				</div>
+			</section>
 		</div>
-	</div>
+    </div>
+{/block}
+
+{block bodyscript}
+	<script src="www/js/components/accordion.min.js"></script>
 {/block}

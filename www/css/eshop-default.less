@@ -1,8 +1,82 @@
 @import "colors";
 @import "media-queries";
 
+@eshopBackground: rgba(255, 255, 54, 0.85);
+
+html {
+    background-color: @eshopBackground;
+}
+
 #page-wrapper {
-    position: relative;
-    background: url(../svg/sunrays.svg) @yellowLight center;
-    background-size: cover;
+	position: relative;
+	background-color: inherit;
+	/*background: url(../svg/sunrays.svg) @yellowLight center; <- fuck them */
+	background-size: cover;
+}
+
+#eshop-menu-container {
+	text-align: left;
+
+	& .uk-parent {
+		& a {
+			color: @almostBlack;
+			&:hover {
+				color: red;
+			}
+		}
+
+		& > a {
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		& ul a {
+			font-size: 1.5em;
+		}
+	}
+}
+
+/* copy from mainpage logo */
+#eshop-logo {
+	text-align: center;
+	color: @yellow;
+	font-size: 6em;
+	line-height: 1em;
+	font-family: "Times New Roman";
+	text-shadow: -2px -2px 0 red, -2px -1px 0 red, -2px 0px 0 red, -2px 1px 0 red, -2px 2px 0 red, -1px -2px 0 red,
+		-1px -1px 0 red, -1px 0px 0 red, -1px 1px 0 red, -1px 2px 0 red, 0px -2px 0 red, 0px -1px 0 red,
+		0px 0px 0 red, 0px 1px 0 red, 0px 2px 0 red, 1px -2px 0 red, 1px -1px 0 red, 1px 0px 0 red, 1px 1px 0 red,
+		1px 2px 0 red, 2px -2px 0 red, 2px -1px 0 red, 2px 0px 0 red, 2px 1px 0 red, 2px 2px 0 red;
+}
+
+/* pryc s hnusnyma sipkama */
+.uk-nav-parent-icon>.uk-parent>a:after {
+	content: "";
+}
+
+.uk-nav-parent-icon>.uk-parent.uk-open>a:after {
+	content: "";
+}
+
+#sort-by-label {
+	text-align: right;
+}
+
+#sort-price {
+	margin: 0 10px;
+}
+
+#product-section {
+	font-size: 1.4em;
+	color: black;
+	margin-top: 30px;
+
+	& > .uk-grid > div {
+		text-align: center;
+	}
+}
+
+#searchbox {
+	padding: 0;
+	font-size: 20px;
 }
