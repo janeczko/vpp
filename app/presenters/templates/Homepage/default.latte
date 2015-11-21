@@ -45,7 +45,7 @@
 					{foreach $imageViews as $view}
 						<div class="image-views view-{$iterator->counter} {if !$iterator->first}display-none{/if}" data-view-counter="{$iterator->counter}">
 							{foreach $view as $image}
-								<a href="www/{$image->path}" data-uk-lightbox="{ group: 'imageViews' }" title="">
+								<a href="www/{$image->path}" data-uk-lightbox="{ group: 'imageViews' }">
 									<img src="www/{$image->path}" alt="{$image->name}">
 								</a>
 							{/foreach}
@@ -53,9 +53,9 @@
 					{/foreach}
 
 					<div n:if="count($imageViews) > 1" class="image-changer">
-						<a><i class="uk-icon-chevron-left uk-icon-medium left"></i></a>
+						<a class="left"><i class="uk-icon-chevron-left uk-icon-medium"></i></a>
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a><i class="uk-icon-chevron-right uk-icon-medium right"></i></a>
+						<a class=right><i class="uk-icon-chevron-right uk-icon-medium"></i></a>
 					</div>
 				</div>
 			</div>
