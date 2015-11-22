@@ -12,6 +12,7 @@
 		<base href="{$base}/">
 
 		<link rel="stylesheet" href="www/css/uikit.min.css">
+		<link rel="stylesheet" href="www/css/components/tooltip.min.css">
 		<link rel="stylesheet" href="www/css/global-style.css">
 		<link n:if="$baseCssExists" rel="stylesheet" href="{$baseCssPath}">
 		{block headstyle}{/block}
@@ -35,6 +36,7 @@
 
 		{include 'components/footer.latte'}
 
+		<script src="www/js/components/tooltip.min.js"></script>
 		<script src="www/js/global-scripts.js"></script>
 		{block bodyscript}{/block}
 		<script n:if="$baseJsExists" src="{$baseJsPath}"></script>

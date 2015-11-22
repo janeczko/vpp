@@ -10,9 +10,26 @@
 		<li class="contact-link"><a href="{if !$isHomepageDefault}{$base}{/if}#kontakt">Kontakt</a></li>
 		<li class="{if $activeMenuItem == 'Eshop'}active{/if}"><a href="{$base}/eshop">Obchod</a></li>
 		<li><a href="{$base}">Půjčovna</a></li>
-		<li><a href=""><i class="uk-icon-shopping-cart uk-icon-small"></i>&nbsp;&nbsp;&nbsp;Košík</a></li>
-		<li><a href=""><i class="uk-icon-user uk-icon-small"></i>&nbsp;&nbsp;&nbsp;Přihlášení</a></li>
 	</ul>
 
 	<a class="open-main-menu"><i class="uk-icon-bars uk-icon-medium"></i></a>
 </nav>
+
+<ul class="right-menu-items">
+	<li class="open-search-panel" n:if="!$isHomepageDefault">
+		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Vyhledat"><i class="uk-icon-search uk-icon-small"></i></a>
+	</li>
+	<li n:if="!$isHomepageDefault">
+		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Košík"><i class="uk-icon-shopping-cart uk-icon-small"></i></a>
+	</li>
+	<li>
+		<a data-uk-tooltip="{ pos: 'bottom-left', cls: 'main-menu-tooltip' }" title="Přihlášení"><i class="uk-icon-user uk-icon-small"></i></a>
+	</li>
+</ul>
+
+<div id="search-panel">
+	<div class="uk-form uk-grid">
+		<input type="text" placeholder="Vyhledat" class="uk-width-2-3 uk-form-large">
+		<button class="uk-button uk-button-default uk-width-1-3"><i class="uk-icon-search uk-icon-small"></i></button>
+	</div>
+</div>

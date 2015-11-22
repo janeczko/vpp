@@ -54,20 +54,18 @@
 					</div>
 				</div>
 				<div id="product-list" class="uk-grid">
-					{for $i = 0; $i < 10; $i++}
-						<div class="uk-width-small-1-3">
-							<div class="product">
-								Balonky
-								<img src="www/images/testeshop.png" width="230" heigth="230" />
-								<div class="uk-grid">
-									<span class="uk-width-medium-1-2"><i class="uk-icon-small">$499</i></span>
-									<span class="uk-width-medium-1-2 into-cart">
-										<i class="uk-icon-shopping-cart uk-icon-medium"></i>
-									</span>
-								</div>
+					<div n:for="$i = 0; $i < 10; $i++" class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+						<div class="product">
+							Balonky
+							<img src="www/svg/party_balloons.svg" width="230" heigth="230" />
+							<div class="uk-grid">
+								<span class="uk-width-medium-1-2"><i class="uk-icon-small">$499</i></span>
+								<span class="uk-width-medium-1-2 into-cart">
+									<i class="uk-icon-shopping-cart uk-icon-medium"></i>
+								</span>
 							</div>
 						</div>
-					{/for}
+					</div>
 				</div>
 			</section>
 		</div>
