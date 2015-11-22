@@ -188,6 +188,11 @@ nav#main-menu .brand > span {
 #search-panel li:hover {
   cursor: pointer;
 }
+@media screen and (max-width: 959px) {
+  #search-panel {
+    display: none;
+  }
+}
 #page-wrapper {
   margin-top: 60px;
 }
