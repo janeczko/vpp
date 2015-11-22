@@ -17,7 +17,7 @@
 
 <ul class="right-menu-items">
 	<li class="open-search-panel" n:if="!$isHomepageDefault">
-		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Vyhledat"><i class="uk-icon-search uk-icon-small"></i></a>
+		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Vyhledat"><i id="open-search" class="uk-icon-search uk-icon-small"></i></a>
 	</li>
 	<li n:if="!$isHomepageDefault">
 		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Košík"><i class="uk-icon-shopping-cart uk-icon-small"></i></a>
@@ -29,7 +29,15 @@
 
 <div id="search-panel">
 	<div class="uk-form uk-grid">
-		<input type="text" placeholder="Vyhledat" class="uk-width-2-3 uk-form-large">
+		<input id="search-input" type="text" placeholder="Vyhledat" class="uk-width-2-3 uk-form-large">
 		<button class="uk-button uk-button-default uk-width-1-3"><i class="uk-icon-search uk-icon-small"></i></button>
 	</div>
 </div>
+
+{block bodyscript}
+	<script>
+		document.getElementById('open-search').onclick = function () {
+			document.getElementById('search-input').focus();
+		};
+	</script>
+{/block}
