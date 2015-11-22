@@ -8,6 +8,9 @@
 linear, left top, left bottom, from(rgba(200,200,200,0.8)),
 to(rgba(255,255,255,0.9))
 );
+@productBackgroundMoz: -moz-linear-gradient(
+	rgba(200,200,200,0.8) 0%, rgba(255,255,255,0.9) 95%
+);
 @productBackgroundHover: -webkit-gradient(
 	linear, left top, left bottom, from(rgba(255,255,255,0.9)),
 	to(rgba(200,200,200,0.8))
@@ -121,6 +124,7 @@ html {
 
 		&:hover {
 			background-image: @productBackgroundHover;
+			background-image: @productBackgroundMoz;
 			box-shadow: 0px 0px 5px 2px black;
 		}
 
