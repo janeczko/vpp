@@ -2,7 +2,9 @@
 @import "media-queries";
 
 @logoHeight: 400px;
-@headlineTop: 110px;
+@headlineTop: 160px;
+@gradientBlockHeight: 150px;
+
 
 @keyframes headlineDown {
     0% {
@@ -21,9 +23,18 @@
 #logo-block {
     height: @logoHeight;
     position: relative;
-    background: url(../svg/sunrays.svg) @yellowLight center;
-    background-size: cover;
-    overflow: hidden;
+    //overflow: hidden;
+
+    .background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: calc(@logoHeight + @gradientBlockHeight);
+        background: url(../svg/sunrays.svg) @yellowLight center;
+        background-size: cover;
+        z-index: -10;
+    }
 
     h1 {
         position: absolute;
@@ -231,5 +242,32 @@
     .map {
         width: 100%;
         height: 100%;
+    }
+}
+
+#desc-gallery-gradient {
+    height: @gradientBlockHeight;
+    background: linear-gradient(@secondColor, @yellowLight);
+}
+
+#gallery-contact-gradient {
+    height: @gradientBlockHeight;
+    background: linear-gradient(@yellowLight, @secondColor);
+}
+
+#logo-desc-gradient {
+    height: @gradientBlockHeight;
+    background: linear-gradient(rgba(255, 255, 255, 0), @secondColor);
+    position: relative;
+
+    .gradient-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -10;
+        //background: url(../svg/sunrays.svg) @yellowLight 0 -1050px;
+        //background-size: cover;
     }
 }
