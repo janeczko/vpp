@@ -1,3 +1,138 @@
 {block content}
+	<div class="uk-grid">
+		<div id="logo-block" class="uk-width-1-1">
+			<h1>vše<br/>PRO PÁRTY</h1>
+			<div class="background"></div>
+			<img class="balloons" src="www/svg/party_balloons.svg" alt="party_balloons.svg">
+		</div>
 
+		<div id="logo-desc-gradient" class="uk-width-1-1">
+			<div class="gradient-background"></div>
+		</div>
+
+
+		<div id="desc-block" class="uk-width-1-1">
+			<div class="uk-grid">
+				<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+					<ul class="desc-list uk-text-right">
+						<li>Vše pro vaši oslavu, party...</li>
+						<li>Prodej karnevalových doplňků</li>
+						<li>Balónky, Girlandy, Svíčky, Ubrousky, Talířky...</li>
+						<li>Zajistíme pro vás nebo oslavence výzdobu dle Vašeho přání nebo tématu</li>
+					</ul>
+				</div>
+
+				<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+					<ul class="desc-list">
+						<li>Půjčovna karnevalových kostýmů a doplňků</li>
+						<li>Prodej narozeninové dekorace 18, 30, 40, 50, 60</li>
+						<li>Tématická party - Havaj, Divoký západ, Retro, Fotbal...</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="desc-gallery-gradient" class="uk-width-1-1"></div>
+
+		<div id="gallery-block" class="uk-width-1-1">
+			<div class="uk-grid">
+				<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+					<div class="uk-slidenav-position gallery" data-uk-slideshow="{ kenburns: true }">
+						<ul class="uk-slideshow">
+							<li n:foreach="$galleryItems as $item"><img class="gallery-item" src="www/{$item->path}" alt="{$item->name}"></li>
+						</ul>
+						<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous" style="color: rgba(255,255,255,0.4)"></a>
+						<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next" style="color: rgba(255,255,255,0.4)"></a>
+						<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+							<li n:foreach="$galleryItems as $item" data-uk-slideshow-item="{$iterator->counter - 1}"><a></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1 image-views-gallery" data-view-maxcount="{count($imageViews)}">
+					{foreach $imageViews as $view}
+						<div class="image-views view-{$iterator->counter} {if !$iterator->first}display-none{/if}" data-view-counter="{$iterator->counter}">
+							{foreach $view as $image}
+								<a href="www/{$image->path}" data-uk-lightbox="{ group: 'imageViews' }">
+									<img src="www/{$image->path}" alt="{$image->name}">
+								</a>
+							{/foreach}
+						</div>
+					{/foreach}
+
+					<div n:if="count($imageViews) > 1" class="image-changer">
+						<a class="left"><i class="uk-icon-chevron-left uk-icon-medium"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a class=right><i class="uk-icon-chevron-right uk-icon-medium"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="gallery-contact-gradient" class="uk-width-1-1"></div>
+
+		<div id="kontakt" class="uk-width-large-2-3 uk-width-medium-1-2 uk-width-small-1-1">
+			<div class="uk-grid">
+				<div class="uk-width-1-1">
+					<h2>Kontakt</h2>
+				</div>
+
+				<div class="uk-width-1-1">
+					<table class="uk-table">
+						<tr>
+							<th class="uk-text-right">Adresa</th>
+							<td>Městský kopec 145, 74301 Bílovec</td>
+						</tr>
+						<tr>
+							<th class="uk-text-right">Otevírací doba</th>
+							<td><strong>po-pá:</strong> 9:00-16:30</td>
+						</tr>
+						<tr>
+							<th class="uk-text-right">Telefon</th>
+							<td>607505345</td>
+						</tr>
+						<tr>
+							<th class="uk-text-right">E-mail</th>
+							<td><a href="mailto:proparty@seznam.cz">proparty@seznam.cz</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		{* TODO - odkaz na mapu potom odomentovat *}
+		<div id="map-block" class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+			<iframe class="map"
+					frameborder="0"
+					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaU4XLAXoE0cRvmed5uOfhOQ&key={$googleMapsKey}"
+					allowfullscreen>
+			</iframe>
+		</div>
+	</div>
+{/block}
+
+{block headstyle}
+	<link rel="stylesheet" href="www/css/components/slideshow.min.css">
+	<link rel="stylesheet" href="www/css/components/slidenav.min.css">
+	<link rel="stylesheet" href="www/css/components/dotnav.min.css">
+	<link rel="stylesheet" href="www/css/test-default.css">
+
+	<style>
+		#logo-block .balloons {
+			transition: left {$animationTime->balloons->h}s, top {$animationTime->balloons->v}s;
+		}
+	</style>
+{/block}
+
+{block bodyscript}
+	<script src="www/js/components/slideshow.min.js"></script>
+	<script src="www/js/components/slideshow-fx.min.js"></script>
+	<script src="www/js/components/lightbox.min.js"></script>
+	<script src="www/js/homepage-default.js"></script>
+
+	<script>
+		var animationTimeHorizontal = {$animationTime->balloons->h};
+		var animationTimeVertical = {$animationTime->balloons->v};
+		var animationTimeGallery = {$animationTime->gallery};
+	</script>
 {/block}
