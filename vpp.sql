@@ -5,6 +5,10 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
+-- DROP DATABASE IF EXISTS `vpp`;
+-- CREATE DATABASE `vpp` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_czech_ci */;
+USE `vpp`;
+
 DROP TABLE IF EXISTS `gallery_items`;
 CREATE TABLE `gallery_items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -54,4 +58,4 @@ CREATE TABLE `user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 
--- 2015-11-21 17:54:55
+-- 2015-11-22 17:33:10

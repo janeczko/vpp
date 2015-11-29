@@ -47,4 +47,9 @@ class HomepagePresenter extends BasePresenter
             'imageViews' => $imageViews
         ]);
 	}
+
+    public function renderTest()
+    {
+        $this->render();
+    }
 }
