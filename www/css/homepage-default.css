@@ -22,6 +22,10 @@
   left: 0;
   height: calc(550px);
   background: url(../svg/sunrays.svg) #FFFF57 center;
+  /* tady nejaky mixin nebo tak neco */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   z-index: -10;
 }
