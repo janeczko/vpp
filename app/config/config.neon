@@ -23,5 +23,7 @@ services:
 	- App\Model\UserManager
 	- App\Model\UserModel
 	- App\Model\Gallery
+	- App\Model\Category
+	- App\Model\EshopProduct
 	router: App\RouterFactory::createRouter
 	user: App\Model\User

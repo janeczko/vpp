@@ -1,0 +1,39 @@
+{layout @layout.latte}
+
+{block title}{ifset subTitle}{include subTitle|striptags} | {/ifset}E-Shop{/block}
+
+{block content}
+	<div class="uk-container uk-container-center">
+		<h2 id="eshop-logo">E-shop</h2>
+		{* mozna bych tu nekde, godzila vi kde, dal breadcrumbs menu *}
+		<div class="uk-grid">
+			<aside id="eshop-menu-container" class="uk-width-medium-2-10">
+
+				{* abecedne serazene  *}
+				<ul class="uk-nav uk-nav-parent-icon" data-uk-nav="{ multiple:true }">
+					<li n:foreach="$eshopCategories as $c" class="uk-parent">
+						<a href="#">{$c->name}</a>
+
+						<ul n:if="!empty($c->subCategories)" class="uk-nav-sub">
+							<li n:foreach="$c->subCategories as $sub">
+								<a href="{$base}/eshop/{$sub->url}">{$sub->name}</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			{include subContent}
+		</div>
+	</div>
+{/block}
+
+{block headStyle}
+	<link rel="stylesheet" href="www/css/eshop-global.css">
+	{block eshopStyle}{/block}
+{/block}
+
+{block bodyScript}
+	<script src="www/js/components/accordion.min.js"></script>
+	{block eshopScript}{/block}
+{/block}

@@ -22,6 +22,7 @@ $(function() {
     $('.right-menu-items .open-search-panel').click(function() {
         if (window.innerWidth >= 960) {
             $('#search-panel').toggleClass('opened');
+            $('#search-input').focus();
         }
     });
 

@@ -8,7 +8,7 @@
 	<ul class="menu-items left-menu-items">
 		<li class="{if $activeMenuItem == 'Homepage'}active{/if}"><a href="{if !$isHomepageDefault}{$base}{/if}">Hlavní stránka</a></li>
 		<li class="contact-link"><a href="{if !$isHomepageDefault}{$base}{/if}#kontakt">Kontakt</a></li>
-		<li class="{if $activeMenuItem == 'Eshop'}active{/if}"><a href="{$base}/eshop">Obchod</a></li>
+		<li class="{if $activeMenuItem == 'Eshop'}active{/if}"><a href="{$base}/eshop">E-Shop</a></li>
 		<li><a href="{$base}">Půjčovna</a></li>
 	</ul>
 
@@ -17,7 +17,7 @@
 
 <ul class="right-menu-items">
 	<li class="open-search-panel" n:if="!$isHomepageDefault">
-		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Vyhledat"><i id="open-search" class="uk-icon-search uk-icon-small"></i></a>
+		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Vyhledat"><i class="uk-icon-search uk-icon-small"></i></a>
 	</li>
 	<li n:if="!$isHomepageDefault">
 		<a data-uk-tooltip="{ pos: 'bottom', cls: 'main-menu-tooltip' }" title="Košík"><i class="uk-icon-shopping-cart uk-icon-small"></i></a>
@@ -33,11 +33,3 @@
 		<button class="uk-button uk-button-default uk-width-1-3"><i class="uk-icon-search uk-icon-small"></i></button>
 	</div>
 </div>
-
-{block bodyscript}
-	<script>
-		document.getElementById('open-search').onclick = function () {
-			document.getElementById('search-input').focus();
-		};
-	</script>
-{/block}
